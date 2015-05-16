@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+
+    background-color: #aca;
+}
+
+
+
+canvas {
+
+    /* next 3 lines center the canvas*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    width: 500px;
+    height: 500px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 3em;
+}
