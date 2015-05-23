@@ -20,6 +20,10 @@ window.onkeyup = function(e) {
 window.onkeydown = function(e) {
    var keyval = e.keyCode ? e.keyCode : e.which;
    key[String.fromCharCode(keyval)] = true;
+
+    if (String.fromCharCode(keyval) == ' ') {
+        vy = -5;
+    }
 }
 
 window.onload = function() {
@@ -45,7 +49,7 @@ function initGame() {
 }
 
 function update() {
-    console.log(" x: " + x + " | y: " + y);
+    // console.log(" x: " + x + " | y: " + y);
 
 
     // bounds detect
@@ -53,19 +57,11 @@ function update() {
         running = false;
     }
 
-
-
-
     // jump
-    if (key[' ']) {
-        vy = -5;
-        key[' '] = false;
 
-    }
+
     vy += .2;
     y += vy;
-
-
 }
 
 function draw() {
